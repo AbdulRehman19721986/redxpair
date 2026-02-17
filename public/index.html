@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red X Session Generator | Abdul Rehman Rajpoot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔴 RED X SESSION GENERATOR</h1>
+            <h2>by Abdul Rehman Rajpoot</h2>
+            <p class="subtitle">Educational WhatsApp Multi-Device Session Manager</p>
+        </header>
+
+        <div class="session-controls">
+            <div class="input-group">
+                <label for="sessionName">Session Name (Optional):</label>
+                <input type="text" id="sessionName" placeholder="e.g., my-bot-session">
+            </div>
+            
+            <div class="button-group">
+                <button onclick="createSession()" class="btn primary">➕ Create Session</button>
+            </div>
+        </div>
+
+        <div class="session-info" id="sessionInfo" style="display: none;">
+            <h3>Session: <span id="sessionIdDisplay"></span></h3>
+            <div class="status-badge" id="statusBadge">Initializing</div>
+        </div>
+
+        <div class="auth-methods" id="authMethods" style="display: none;">
+            <h3>Choose Authentication Method:</h3>
+            
+            <div class="method-card" id="qrMethod">
+                <h4>📷 QR Code Method</h4>
+                <p>Scan with WhatsApp on your phone</p>
+                <div class="qr-container">
+                    <img id="qrImage" src="" alt="QR Code">
+                </div>
+                <p class="instruction">Open WhatsApp → Menu → Linked Devices → Link a Device</p>
+            </div>
+
+            <div class="method-card" id="pairingMethod">
+                <h4>📱 Phone Number Method</h4>
+                <p>Connect without QR code</p>
+                
+                <div class="input-group">
+                    <label for="phoneNumber">Phone Number (with country code):</label>
+                    <input type="text" id="phoneNumber" placeholder="e.g., 12345678901">
+                    <small>Include country code, no + or spaces</small>
+                </div>
+                
+                <button onclick="requestPairingCode()" class="btn secondary">🔑 Generate Pairing Code</button>
+                
+                <div class="pairing-code-result" id="pairingCodeResult" style="display: none;">
+                    <h4>Your Pairing Code:</h4>
+                    <div class="code-display" id="pairingCode"></div>
+                    <div class="instructions-box" id="pairingInstructions"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="session-status" id="sessionStatus" style="display: none;">
+            <h3>Session Status</h3>
+            <pre id="statusDetails"></pre>
+        </div>
+
+        <footer>
+            <p>⚠️ Educational Purpose Only | Not affiliated with WhatsApp/Meta</p>
+            <p>© 2025 Abdul Rehman Rajpoot</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
