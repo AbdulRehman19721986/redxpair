@@ -1,0 +1,18 @@
+{
+  "name": "redx-session-generator",
+  "version": "1.0.0",
+  "description": "Educational WhatsApp Session Generator by Abdul Rehman Rajpoot",
+  "main": "api/session.js",
+  "scripts": {
+    "dev": "vercel dev",
+    "deploy": "vercel deploy --prod"
+  },
+  "keywords": ["whatsapp", "session", "generator", "educational"],
+  "author": "Abdul Rehman Rajpoot",
+  "license": "MIT",
+  "dependencies": {
+    "bailzx": "^8.0.0",
+    "qrcode": "^1.5.3",
+    "qrcode-terminal": "^0.12.0"
+  }
+}
